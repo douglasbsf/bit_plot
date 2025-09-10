@@ -1121,10 +1121,7 @@ class TrajectoryProcessor:
         ax2.plot(self.df['longitude'], self.df['latitude'], 
                 'b-', linewidth=2, alpha=0.8, label='Trajetória Suavizada')
         
-        # Adiciona números sequenciais nos pontos originais
-        for i, (lon, lat) in enumerate(zip(original_df['longitude'], original_df['latitude'])):
-            ax2.annotate(str(i), (lon, lat), xytext=(2, 2), textcoords='offset points', 
-                       fontsize=12, alpha=0.8, color='red', weight='bold')
+        # Números sequenciais removidos - não são mais necessários
         
         ax2.set_xlabel('Longitude')
         ax2.set_ylabel('Latitude')
